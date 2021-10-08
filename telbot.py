@@ -17,7 +17,7 @@ def send_weather(message):
     cloud_speed = w.wind()['speed']
     temp = w.temperature('celsius')["temp"]
     answer = "В городе " + message.text + " на данный момент следующие погодные условия:\n"
-    answer += "Teмпиратура: " + str(temp) + " градусов Цельсия\n"
+    answer += "Teмпература: " + str(temp) + " градусов Цельсия\n"
     answer += "Влажность воздуха: " + str(w.humidity) + "%\n"
     answer += "Скорость воздуха: " + str(cloud_speed) + " метров в секунду\n"
     bot.send_message (message.chat.id, answer)
